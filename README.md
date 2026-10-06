@@ -20,7 +20,7 @@ source .venv/bin/activate  # .venv\Scripts\activate on Windows
 
 No `uv`? Install it from [docs.astral.sh/uv](https://docs.astral.sh/uv/getting-started/installation/), or use plain pip: `pip install .` from the repository root.
 
-The agents run on Amazon Bedrock by default (Claude Sonnet 4.6; chapter 7 uses Claude Opus 5). You need AWS credentials with access to those models, see [Chapter 0](https://catalog.us-east-1.prod.workshops.aws/workshops/e1493217-4bc7-42f4-87d9-e231acd743bc/en-US/0-pre-requisites).
+The agents run on Amazon Bedrock by default (Claude Sonnet 4.6; chapter 7 uses Claude Opus 5). Chapter 9 additionally creates three Amazon Bedrock AgentCore resources in your account (a memory, an evaluator, a configuration bundle); `9_self_improving_player/cleanup.py` deletes them. You need AWS credentials with access to those models, see [Chapter 0](https://catalog.us-east-1.prod.workshops.aws/workshops/e1493217-4bc7-42f4-87d9-e231acd743bc/en-US/0-pre-requisites).
 
 ## The Adventure Map
 
@@ -34,6 +34,7 @@ The agents run on Amazon Bedrock by default (Claude Sonnet 4.6; chapter 7 uses C
 | 5. The Grand Alliance - A2A | [`5_a2a_integration/`](5_a2a_integration/) | Rules Agent + Character Agent over A2A, a Game Master orchestrator with structured output |
 | 6. Web Interface Testing | [web UI](https://aws-samples.github.io/sample-once-upon-agentic-ai/) | Play with your Game Master through the browser |
 | 7. The Enchanted Armour - Strands harness | [`7_strands_harness/`](7_strands_harness/) | The Game Master API rebuilt with `create_harness()` |
+| 9. The Apprentice Adventurer - Self-improving player | [`9_self_improving_player/`](9_self_improving_player/) | A player agent that plays your Game Master and improves: AgentCore episodic Memory (inner loop), a custom Evaluations judge, and Optimization prompt recommendations versioned in a configuration bundle with a human promotion gate (outer loop) |
 | Final cleanup | [instructions](https://catalog.us-east-1.prod.workshops.aws/workshops/e1493217-4bc7-42f4-87d9-e231acd743bc/en-US/cleanup) | Stop your services and delete the generated files |
 
 Complete the chapters in order: each one reuses what the previous one built.

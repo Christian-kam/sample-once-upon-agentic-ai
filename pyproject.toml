@@ -30,4 +30,10 @@ dependencies = [
     # moved to run(transport="streamable-http", port=...). Do not raise this ceiling until those
     # chapters and the workshop catalog are ported together — see issue #50.
     "mcp<2",
+
+    # Amazon Bedrock AgentCore SDK (chapter 9): Memory session manager for Strands. boto3 floor is the
+    # first release that ships the AgentCore Evaluations + Optimization APIs (Evaluate, Recommendations,
+    # Configuration bundles) that chapter 9 calls directly.
+    "bedrock-agentcore>=1.24",
+    "boto3>=1.43",
 ]

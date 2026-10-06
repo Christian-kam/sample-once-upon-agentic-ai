@@ -215,3 +215,9 @@ dnd_knowledge_base/
 
 # Strands harness state (chapter 7): sessions and long-term memory
 .agent/
+
+# Chapter 9 (self-improving player): per-participant AWS resource ids, recorded games and scores
+9_self_improving_player/.player_config.json
+9_self_improving_player/traces/
+9_self_improving_player/results/
+9_self_improving_player/promotions.log
